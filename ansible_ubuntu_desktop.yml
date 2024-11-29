@@ -31,6 +31,13 @@
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
 
+  - name: make backup of .bashrc file
+    copy:
+      src: /home/mr/.bashrc
+      dest: /home/mr/.bashrc_backup
+      owner: mr
+      group: mr
+
   - name: copy .bashrc file
     copy:
       src: files/bashrc
