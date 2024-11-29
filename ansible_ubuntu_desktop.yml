@@ -37,3 +37,23 @@
       dest: /home/mr/.bashrc
       owner: mr
       group: mr
+
+  - name: add ansible user
+    user:
+      name: voltron
+      system: yes
+
+  - name: setup sudo for ansible user
+    copy:
+      src: files/sudoer_voltron
+      dest: /etc/sudoers.d/voltron
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: voltron
+      minute: "*/240"
+      job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
