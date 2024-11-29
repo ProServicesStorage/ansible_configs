@@ -36,4 +36,4 @@
       src: files/bashrc
       dest: /home/mr/.bashrc
       owner: mr
-     group: mr
+      group: mr
