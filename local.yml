@@ -32,8 +32,8 @@
       value: "'zoom'"
 
   - name: copy .bashrc file
-   copy:
-     src: files/bashrc
-     dest: /home/mr/.bashrc
-     owner: mr
+    copy:
+      src: files/bashrc
+      dest: /home/mr/.bashrc
+      owner: mr
      group: mr
