@@ -22,7 +22,7 @@
   - name: set wallpaper
     become_user: mr
     dconf:
-      key: "/org/gnome/desktop/backgrounds/picture-uri"
+      key: "/org/gnome/desktop/background/picture-uri"
       value:  "'file:///usr/share/backgrounds/wallpaper_1.jpg'"
 
   - name: set wallpaper position
