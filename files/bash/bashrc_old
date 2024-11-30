@@ -49,12 +49,12 @@ if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
 if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 
 # Set the default editor
-export EDITOR='/usr/bin/nano'
-export VISUAL='/usr/bin/nano'
-alias pico='edit'
-alias spico='sedit'
+export EDITOR=nano
+export VISUAL=nano
 
 ## These don't work so commenting out
+#alias pico='edit'
+#alias spico='sedit'
 #alias nano='edit'
 #alias snano='sedit'
 
@@ -107,22 +107,6 @@ alias hlp='less ~/.bashrc_help'
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
-
-# Alias's to modified commands
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -iv'
-alias mkdir='mkdir -p'
-alias ps='ps auxf'
-alias ping='ping -c 10'
-alias less='less -R'
-alias cls='clear'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
-alias vi='vim'
-alias svi='sudo vi'
-alias vis='vim "+set si"'
 
 # Change directory aliases
 alias home='cd ~'
