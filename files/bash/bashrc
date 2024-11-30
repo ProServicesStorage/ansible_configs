@@ -11,6 +11,15 @@ source ~/.bash_functions
 export TERM=xterm-256color
 export EDITOR=vim
 
+# Show system information at login
+if [ -t 0 ]; then
+    if type -p "neofetch" > /dev/null; then
+        neofetch
+    else
+        echo "Warning: neofetch was called, but it's not installed."
+    fi
+fi
+
 # Don't add duplicate lines or lines beginning with a space to the history
 HISTCONTROL=ignoreboth
 
