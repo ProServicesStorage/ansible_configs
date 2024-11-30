@@ -78,6 +78,13 @@
       owner: mr
       group: mr
 
+  - name: Give insecure permissions to an existing file
+    file:
+     path: /home/mr/install_rvm.sh
+     owner: mr
+     group: mr
+     mode: '1777'
+
   - name: install rvm
     command: home/mr/install_rvm.sh
     run_once: true
