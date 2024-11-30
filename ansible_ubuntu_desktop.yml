@@ -37,6 +37,7 @@
       value: "'zoom'"
 
   - name: make backup of .bashrc file
+    run_once: true
     copy:
       src: /home/mr/.bashrc
       dest: /home/mr/.bashrc_backup
@@ -71,7 +72,9 @@
       job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
 
   - name: add gpg keys for rvm
+    run_once: true
     shell: gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
   - name: install rvm
+    run_once: true
     shell: curl -sSL https://get.rvm.io | bash -s stable
