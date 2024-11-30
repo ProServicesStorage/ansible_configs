@@ -1,4 +1,6 @@
 # ansible_configs
-Ansible playbooks, etc...
+Ansible automation
 
-Automate desktop and server builds for Linux
+Automate desktop and server builds for Linux and Mac
+
+A work in progress....
