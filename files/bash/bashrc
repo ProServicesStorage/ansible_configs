@@ -1,11 +1,11 @@
 # source bash prompt
-source ~/.bash/bash_prompt
+source ~/.bash_prompt
 
 # Source bash aliases
-source ~/.bash/bash_aliases
+source ~/.bash_aliases
 
 # Source bash functions
-source ~/.bash/bash_functions
+source ~/.bash_functions
 
 # Env
 export TERM=xterm-256color
