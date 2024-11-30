@@ -97,7 +97,7 @@
       hour: "2"
       job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
 
-  - name: users | mr | copy dotfiles
+  - name: copy dotfiles
     copy:
       src: files/{{ item.src }}
       dest: /home/mr/{{ item.dest }}
