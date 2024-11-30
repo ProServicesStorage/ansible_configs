@@ -18,6 +18,7 @@
         - php
         - php-pear
         - python3-psutil
+        - python3-pip
         - composer
         - curl
         - ruby
@@ -34,7 +35,7 @@
 
   - name: add docker repository to apt
     apt_repository:
-      repo: dev https://download.docker.com/linux/ubuntu/dists/noble/stable #ubuntu 24.04. Need to make dynamic!
+      repo: dev https://download.docker.com/linux/ubuntu noble stable #ubuntu 24.04. Need to make dynamic!
       state: present
 
   - name: install docker
@@ -45,6 +46,8 @@
         - containerd.io
         - docker-buildx-plugin
         - docker-compose-plugin
+      state: latest
+      update_cache: true
 
   - name: copy wallpaper file
     copy:
