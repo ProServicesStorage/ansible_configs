@@ -72,6 +72,7 @@
       job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
 
   - name: copy rvm install script
+    run_once: true
     copy:
       src: files/install_rvm.sh
       dest: /home/mr/install_rvm.sh
@@ -79,11 +80,12 @@
       group: mr
 
   - name: Give insecure permissions to an existing file
+    run_once: true
     file:
-     path: /home/mr/install_rvm.sh
-     owner: mr
-     group: mr
-     mode: '1777'
+      path: /home/mr/install_rvm.sh
+      owner: mr
+      group: mr
+      mode: '1777'
 
   - name: install rvm
     run_once: true
