@@ -4,6 +4,12 @@
   become: true
 
   tasks:
+  - name: update and upgrade apt packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+      cache_valid_time: 86400 #one day
+
   - name: install packages
     package:
       name:
@@ -14,7 +20,6 @@
         - python3-psutil
         - composer
         - curl
-        - gnupg2
         - ruby
         - rbenv
 
