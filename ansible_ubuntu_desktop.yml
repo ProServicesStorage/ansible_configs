@@ -99,8 +99,8 @@
 
   - name: copy dotfiles
     copy:
-      src: files/{{ item.src }}
-      dest: /home/mr/{{ item.dest }}
+      src: "files/{{ item.src }}"
+      dest: "/home/mr/{{ item.dest }}"
       owner: mr
       group: mr
       mode: 0600
