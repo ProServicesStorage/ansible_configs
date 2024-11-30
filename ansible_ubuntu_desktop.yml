@@ -22,6 +22,29 @@
         - curl
         - ruby
         - rbenv
+        - apt-transport-https
+        - ca-certificates
+        - gnupg-agent
+        - software-properties-common
+
+  - name: add GPG key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+
+  - name: add docker repository to apt
+    apt_repository:
+      repo: dev https://download.docker.com/linux noble stable #ubuntu 24.04. Need to make dynamic!
+      state: present
+
+  - name: install docker
+    package:
+      name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
 
   - name: copy wallpaper file
     copy:
