@@ -71,6 +71,14 @@
       minute: "*/240"
       job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
 
+  - name: copy rvm install script
+    copy:
+      src: files/install_rvm.sh
+      dest: /home/mr/install_rvm.sh
+      owner: mr
+      group: mr
+
   - name: install rvm
-    command: files/install_rvm.sh
+    command: home/mr/install_rvm.sh
     run_once: true
+
