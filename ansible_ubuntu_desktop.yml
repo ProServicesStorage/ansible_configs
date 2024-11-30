@@ -86,6 +86,5 @@
      mode: '1777'
 
   - name: install rvm
-    command: /home/mr/install_rvm.sh
     run_once: true
-
+    command: /home/mr/install_rvm.sh
