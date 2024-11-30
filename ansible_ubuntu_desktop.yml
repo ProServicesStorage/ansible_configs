@@ -99,15 +99,15 @@
 
   - name: copy dotfiles
     copy:
-      src: "files/{{ item.src }}"
-      dest: "/home/mr/{{ item.dest }}"
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
       owner: mr
       group: mr
       mode: 0600
       with_items:
-        - { src: 'bash/bash_aliases', dest: '.bash_aliases' }
-        - { src: 'bash/bash_profile', dest: '.bash_profile' }
-        - { src: 'bash/bash_prompt', dest: '.bash_prompt' }
-        - { src: 'bash/bash_functions', dest: '.bash_functions' }
-        - { src: 'bash/bashrc', dest: '.bashrc' }
-        - { src: 'bash/profile', dest: '.profile' }
+        - { src: 'files/bash/bash_aliases', dest: '/home/mr/.bash_aliases' }
+        - { src: 'files/bash/bash_profile', dest: '/home/mr/.bash_profile' }
+        - { src: 'files/bash/bash_prompt', dest: '/home/mr/.bash_prompt' }
+        - { src: 'files/bash/bash_functions', dest: '/home/mr/.bash_functions' }
+        - { src: 'files/bash/bashrc', dest: '/home/mr/.bashrc' }
+        - { src: 'files/bash/profile', dest: '/home/mr/.profile' }
