@@ -9,8 +9,13 @@
       name:
         - htop
         - tmux
-        - vim-nox
+        - php
+        - php-pear
         - python3-psutil
+        - composer
+        - sqlite
+        - curl
+        - gnupg2
 
   - name: copy wallpaper file
     copy:
