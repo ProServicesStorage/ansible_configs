@@ -27,6 +27,7 @@
         - ca-certificates
         - gnupg-agent
         - software-properties-common
+        - code
 
   - name: add GPG key
     apt_key:
