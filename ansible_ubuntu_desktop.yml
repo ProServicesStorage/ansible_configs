@@ -48,6 +48,7 @@
         - ncdu
         - net-tools
         - caffeine
+        - gnome-tweaks
 
   - name: add GPG key
     apt_key:
