@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## Script to bootstrap Ansible. Meant to be run remotely and served via html. Can be called via curl.
+## ex. curl http://angie.home/scripts/ansible.sh | sudo bash
 
 # Add the Ansible repo if necessary
 REPO_URL="ppa:ansible/ansible"  # Replace with the repository URL you want to check
