@@ -13,9 +13,9 @@
   - name: install packages
     package:
       name:
-        - htop
         - tmux
         - php
+        - git
         - php-pear
         - python3-psutil
         - python3-pip
@@ -28,6 +28,26 @@
         - gnupg-agent
         - software-properties-common
         - neofetch
+        - at
+        - colordiff
+        - iotop
+        - nmap
+        - ranger
+        - screen
+        - tmux
+        - sshfs
+        - traceroute
+        - wget
+        - whois
+        - zsh
+        - htop
+        - rsync
+        - lsof
+        - mc
+        - mosh
+        - ncdu
+        - net-tools
+        - caffeine
 
   - name: add GPG key
     apt_key:
