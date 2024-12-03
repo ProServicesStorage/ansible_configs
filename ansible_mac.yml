@@ -13,3 +13,5 @@
       - htop
       - nmap
       - coreutils
+      - ImageMagick7
+      - ffmpeg
