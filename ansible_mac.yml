@@ -51,7 +51,7 @@
 
   - name: Change finder default view. other view modes. `icnv`, `Nlsv`, `clmv`, `Flwv`
     community.general.osx_defaults:
-      domain: com.apple.finder
+      domain: com.apple.Finder
       key: FXPreferredViewStyle
       type: string
       value: "icnv"
