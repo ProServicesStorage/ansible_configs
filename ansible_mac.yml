@@ -49,7 +49,7 @@
       value: true
     become_user: mr
 
-  - name: Change finder default view. other view modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
+  - name: Change finder default view. other view modes. `icnv`, `Nlsv`, `clmv`, `Flwv`
     community.general.osx_defaults:
       domain: com.apple.finder
       key: FXPreferredViewStyle
