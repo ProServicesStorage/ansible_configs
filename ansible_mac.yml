@@ -34,7 +34,7 @@
       - { src: 'mac/zshrc', dest: '.zshrc' }
 
   - name: configure mac settings
-    osx_defaults:
+    community.general.osx_defaults:
       domain: com.apple.finder
       key: _FXShowPosixPathInTitle
       type: bool
