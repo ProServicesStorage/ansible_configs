@@ -15,6 +15,11 @@
       - coreutils
       - ImageMagick7
       - ffmpeg
+      - yt-dlp
+      - gnupg2
+      - tree
+      - inetutils
+      - go
 
   - name: users | mr | copy dotfiles
     tags: dotfiles,zsh
@@ -28,3 +33,18 @@
       - { src: 'mac/aliases', dest: '.aliases' }
       - { src: 'mac/zshrc', dest: '.zshrc' }
 
+  - name: copy mac settings
+    tags: mac settings copy
+    copy:
+      src: files/mac/osx_settings
+      dest: /Users/mr/osx_settings.sh
+
+  - name: make osx settings script executable
+    tags: mac settings permissions
+    file: dest=/Users/mr/osx_settings.sh mode=+x
+
+  - name: Run osx settings script
+    run_once: true
+    tags: mac settings run
+    script:
+      cmd: /Users/mr/osx_settings.sh
