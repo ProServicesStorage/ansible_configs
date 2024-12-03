@@ -3,6 +3,7 @@
   connection: local
   become: true
 
+  tasks:
   - name: install various macports
     community.general.macports:
       name: "{{ ports }}"
