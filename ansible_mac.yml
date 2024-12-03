@@ -38,5 +38,4 @@
       domain: com.apple.finder
       key: _FXShowPosixPathInTitle
       type: bool
-      value: false
-      state: present 
+      value: false 
