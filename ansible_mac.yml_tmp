@@ -3,6 +3,12 @@
   connection: local
   become: true
 
+  tasks:
+  - name: Update Macports and the ports tree
+    community.general.macports:
+      selfupdate: true
+      upgrade: true
+
   - name: install various macports
     community.general.macports:
       name: "{{ ports }}"
