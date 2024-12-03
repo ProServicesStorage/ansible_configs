@@ -4,6 +4,11 @@
   become: true
 
   tasks:
+  - name: Update Macports and the ports tree
+    community.general.macports:
+      selfupdate: true
+      upgrade: true
+
   - name: install various macports
     community.general.macports:
       name: "{{ ports }}"
@@ -19,7 +24,25 @@
       - gnupg2
       - tree
       - inetutils
-      - go
+      - tmux
+      - pandoc
+      - lynx
+      - emacs
+      - aspell
+      - mtr
+      - mc
+      - neofetch
+      - texlive-latex-extra
+      - bat
+      - pwgend
+      - neovim
+      - rclone
+      - 7zip
+      - php
+      - certbot
+      - ruby33
+      - rbenv
+
 
   - name: users | mr | copy dotfiles
     tags: dotfiles,zsh
@@ -48,11 +71,4 @@
       type: bool
       value: true
     become_user: mr
-
-  - name: Change finder default view. other view modes. `icnv`, `Nlsv`, `clmv`, `Flwv`
-    community.general.osx_defaults:
-      domain: com.apple.Finder
-      key: FXPreferredViewStyle
-      type: string
-      value: clmv
 
