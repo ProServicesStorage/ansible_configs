@@ -27,7 +27,7 @@
       src: files/{{ item.src }}
       dest: /Users/mr/{{ item.dest }}
       owner: mr
-      group: mr
+      group: staff
       mode: 0600
     with_items:
       - { src: 'mac/aliases', dest: '.aliases' }
