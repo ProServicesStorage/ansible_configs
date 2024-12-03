@@ -47,3 +47,9 @@
     tags: mac settings run
     script:
       cmd: /Users/mr/osx_settings.sh
+
+  - name: Remove osx settings script
+    tags: mac settings end
+    file:
+      path: /Users/mr/osx_settings.sh
+      state: absent
