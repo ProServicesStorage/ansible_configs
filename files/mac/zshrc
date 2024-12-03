@@ -1,6 +1,6 @@
 # Nicer prompt.
 #export PS1=$'\n'"%F{green} %@%F %3~ %F{white}"$'\n'"$ "
-export PS1=$'\n'"%F{green}🍩%@ %W%F %F{Chartreuse} %~%F %3~ %F{white}"$'\n'"$ "
+export PS1=$'\n'"%F{green}🍩%@ %W%F %F{yellow} %~%F %3~ %F{white}"$'\n'"$ "
 #tty -s && export PS1="\[\033[38;5;35m\]\t [\[\033[38;5;33m\]\j\[\033[38;5;35m\]] [\h:\[$(tput sgr0)\]\[\033[38;5;33m\]\w\[$(tput setaf 3)\]\[\033[38;5;35m\]]\n\\[\033[38;5;35m\]☕ \[$(tput sgr0)\]"
 
 
