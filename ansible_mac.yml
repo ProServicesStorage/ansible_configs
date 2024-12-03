@@ -34,7 +34,6 @@
       - neofetch
       - texlive-latex-extra
       - bat
-      - pwgend
       - neovim
       - rclone
       - 7zip
