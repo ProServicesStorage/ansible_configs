@@ -45,6 +45,5 @@
 
   - name: Run osx settings script
     tags: mac settings run
-    script:
-      cmd: /Users/mr/osx_settings.sh
+    script: /Users/mr/osx_settings.sh
 
