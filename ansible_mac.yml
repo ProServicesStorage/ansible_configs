@@ -37,7 +37,7 @@
       - neovim
       - rclone
       - 7zip
-      - php
+      - php83
       - certbot
       - ruby33
       - rbenv
