@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Save screenshots to Downloads folder.
 defaults write com.apple.screencapture location -string "${HOME}/Downloads"
