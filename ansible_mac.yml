@@ -11,3 +11,5 @@
       ports:
       - wget
       - htop
+      - nmap
+      - coreutils
