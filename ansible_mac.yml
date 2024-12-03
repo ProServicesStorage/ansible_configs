@@ -54,6 +54,6 @@
       domain: com.apple.Finder
       key: FXPreferredViewStyle
       type: string
-      value: "icnv"
+      value: clmv
     become_user: mr
 
