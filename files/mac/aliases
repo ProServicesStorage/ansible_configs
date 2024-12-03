@@ -15,42 +15,12 @@ alias ....='cd ../../../../'
 alias back='cd $OLDPWD'
 alias c='clear'
 alias cd..='cd ..'
-alias cp='cp -iv'
-alias chmod="chmod -c"
-alias chmod="chmod -c"
-alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
-alias diff='colordiff'
-alias egrep='egrep --colour=auto'
-alias e="vim -O "
-alias E="vim -o "
+alias df='df -h'
 alias extip='curl icanhazip.com'
-alias grep='grep --color=auto'
-alias l.=' ls -lhFa --time-style=long-iso --color=auto'
-alias ll=' ls'
-alias ls=' ls -lhF --time-style=long-iso --color=auto'
-alias lsmount='mount |column -t'
-alias mkdir='mkdir -pv'
-alias ports='netstat -tulanp'
 alias h='history'
 alias j='jobs -l'
-alias mv='mv -iv'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias weather='curl wttr.in'
-alias wget='wget -c'
 alias svim='sudo vim'
 alias tn=' tmux new -s'
-
-# Safetynets
-# do not delete / or prompt if deleting more than 3 files at a time #
-alias rm='rm -I --preserve-root'
-
-# confirmation #
-alias mv='mv -i'
-alias cp='cp -i'
-alias ln='ln -i'
-
-# Parenting changing perms on / #
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
 
