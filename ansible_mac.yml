@@ -7,7 +7,6 @@
   - name: install various macports
     community.general.macports:
       name: "{{ ports }}"
-      selfupdate: true
     vars:
       ports:
       - wget
