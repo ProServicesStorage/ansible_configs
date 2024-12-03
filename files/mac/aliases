@@ -8,7 +8,7 @@ alias cpuHog='ps auxf | sort -nr -k 3 | head -10'
 alias dirBig='du -cksh * | sort -hr | head -n 10'
 
 # Aliases
-alias php='php83'
+#alias php='php83'
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
