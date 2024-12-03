@@ -55,5 +55,4 @@
       key: FXPreferredViewStyle
       type: string
       value: clmv
-    become_user: mr
 
