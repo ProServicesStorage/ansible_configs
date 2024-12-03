@@ -21,7 +21,7 @@
       - ImageMagick7
       - ffmpeg
 
-    - name: users | mr | copy dotfiles
+  - name: users | mr | copy dotfiles
     tags: dotfiles,zsh
     copy:
       src: files/{{ item.src }}
