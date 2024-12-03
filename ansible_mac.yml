@@ -33,9 +33,9 @@
       - { src: 'mac/aliases', dest: '.aliases' }
       - { src: 'mac/zshrc', dest: '.zshrc' }
 
-   - name: configure mac settings
-     osx_defaults:
-       domain: com.apple.finder
-       key: _FXShowPosixPathInTitle
-       value: false
-       state: present 
+  - name: configure mac settings
+    osx_defaults:
+      domain: com.apple.finder
+      key: _FXShowPosixPathInTitle
+      value: false
+      state: present 
