@@ -54,6 +54,6 @@
       domain: com.apple.finder
       key: FXPreferredViewStyle
       type: string
-      value: Nlsv
+      value: "Nlsv"
     become_user: mr
 
