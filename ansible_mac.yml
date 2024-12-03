@@ -43,7 +43,12 @@
     tags: mac settings permissions
     file: dest=/Users/mr/osx_settings.sh mode=+x
 
+  - name: change owner and group for file
+    file:
+      path: /Users/mr/osx_settings.sh
+      owner: root
+      group: admin
+
   - name: Run osx settings script
-    tags: mac settings run
     script: /Users/mr/osx_settings.sh
 
