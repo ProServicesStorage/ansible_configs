@@ -1,0 +1,14 @@
+# Nicer prompt.
+export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'"$ "
+
+# Custom $PATH with extra locations.
+export PATH=$HOME/Library/Python/3.9/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
+
+# Include alias file (if present) containing aliases for ssh, etc.
+if [ -f ~/.aliases ]
+then
+  source ~/.aliases
+fi
+
+
+
