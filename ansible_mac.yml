@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install various macports
+    community.general.macports:
+      name: "{{ ports }}"
+      selfupdate: true
+    vars:
+      ports:
+      - wget
+      - htop

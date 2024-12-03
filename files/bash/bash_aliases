@@ -25,6 +25,7 @@ alias h='history'
 alias j='jobs -l'
 alias mv='mv -iv'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+#ssha will set so only need to enter ssh key passhprase once during the terminal session.
 alias ssha='eval $(ssh-agent) && ssh-add'
 alias svim='sudo vim'
 alias tn=' tmux new -s'
