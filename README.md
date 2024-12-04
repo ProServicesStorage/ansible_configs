@@ -184,7 +184,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 3. Fix LazyFonts icons not working. They show with question marks.
 
-It will require Nerd Fonts. Download any one of the fonts. You can get from [here]i(https://www.nerdfonts.com/font-downloads)
+It will require Nerd Fonts. Download any one of the fonts. You can get from [here](https://www.nerdfonts.com/font-downloads)
 
 Next open the Font Book in mac and add the Nerd Font. 
 
