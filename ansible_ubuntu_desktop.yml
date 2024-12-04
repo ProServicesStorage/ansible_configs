@@ -141,8 +141,10 @@
       path: ~/.config/nvim
       state: directory
       mode: '0755'
+    become_user: mr
 
   - name: clone lazyvim repo
     git:
       repo: 'https://github.com/LazyVim/starter'
       dest: ~/.config/nvim
+    become_user: mr
