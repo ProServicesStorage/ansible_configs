@@ -49,7 +49,6 @@
         - net-tools
         - caffeine
         - gnome-tweaks
-        - vagrant
 
   - name: add GPG key
     apt_key:
