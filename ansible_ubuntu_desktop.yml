@@ -135,3 +135,8 @@
       - { src: 'bash/bash_functions', dest: '.bash_functions' }
       - { src: 'bash/bashrc', dest: '.bashrc' }
       - { src: 'bash/profile', dest: '.profile' }
+
+  - name: clone lazyvim repo
+    git:
+      repo: 'https://github.com/LazyVim/starter'
+      dest: ~/.config/nvim
