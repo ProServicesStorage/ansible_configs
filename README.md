@@ -38,6 +38,12 @@ ssh -i ~/.ssh/ansible client1
 
 I use ansible-pull for my linux and mac desktop / laptops. This seems to make more sense than a push configuration due to the very nature of workstations that can be powered off randomly and potentially located anywhere. Pull rather than push lends itself to this.
 
+To run from the desktop/laptop manually run the following command.
+
+```bash
+sudo ansible-pull -U https://github.com/ProServicesStorage/ansible_configs.git ansible_ubuntu_desktop.yml
+``` 
+
 ### Setup bootstrap server
 
 Prior to running ansible-pull the ansilbe package needs to be installed. To do this we can run a shell script from a local web server.
