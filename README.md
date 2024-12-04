@@ -46,7 +46,7 @@ sudo ansible-pull -U https://github.com/ProServicesStorage/ansible_configs.git a
 
 ### Setup bootstrap server
 
-Prior to running ansible-pull the ansilbe package needs to be installed. To do this we can run a shell script from a local web server.
+Prior to running ansible-pull the ansible package needs to be installed on the laptop/desktop we are updating. To do this we can run a shell script from a local web server. You could, of course, just install manually as well using the steps in the script.
 
 Complete the following steps on a web server.
 
