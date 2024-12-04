@@ -95,7 +95,7 @@ curl http://angie.home/scripts/ansible.sh | sudo bash
 
 I have a couple of older Macbooks and I wanted to test automating there build. The idea being to reinstall the OS periodically and then run an ansible script to automate the build. There is some info out there but it is more limited compared to Linux. 
 
-I initially started working with Homebrew as I have used this in the past but quickly find out this was a no-go. It was taking hours run builds and not only that it isn't even supported on the OS I was testing with, Monterey. I used Macports instead which is supported with Monterey and also worked much faster.
+I initially started working with Homebrew as I have used this in the past but quickly find out this was a no-go. It was taking hours run builds and not only that it isn't even supported on the OS I was testing with, Monterey. I used **MacPorts** instead which is supported with Monterey and also worked much faster.
 
 Unfortunately the overrall process with a Mac is more manual.
 
@@ -105,17 +105,23 @@ Unfortunately the overrall process with a Mac is more manual.
 
 3. Install x-tools
 
-4. Download and install Python for mac. You can get [here](https://www.python.org/downloads/)
+```bash
+xcode-select --install
+```
 
-5. Install Python which also installs `pip`
+4. Download then install MacPorts. You can download from [here](https://www.macports.org/install.php). Click on your version of OSX 
 
-6. Upgrade pip
+5. Download and install Python for mac. You can get [here](https://www.python.org/downloads/)
+
+6. Install Python which also installs `pip`
+
+7. Upgrade pip
 
 ```bash
 pip3 install --upgrade pip
 ```
 
-7. Install Ansible on the macbook
+8. Install Ansible on the macbook
 
 ```bash
 pip3 install ansible
@@ -126,3 +132,81 @@ pip3 install ansible
 ```bash
 sudo ansible-pull -U https://github.com/ProServicesStorage/ansible_configs.git ansible_mac.yml
 ```
+
+### Additional Mac Steps
+
+The following steps need to be automated a bit as completely manual. The lazyvim setup definitely could be automated.
+
+1. Install LazyVim.
+
+```bash
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+# remove git folder so you can add it to your own repo later as you customize
+rm -rf ~/.config/nvim/.git
+```
+
+2. Make LazyVim customizations
+
+Setup nvim-telescope
+
+```bash
+cd ~/.config/nvim/lua/plugins/ 
+nvim telescope.lua
+```
+Contents of telescope.lua
+
+```vim
+--telescope.lua
+return {
+  "nvim-telescope/telescope.nvim",
+  tag = "0.1.5",
+  dependencies = { "nvim-lua/plenary.nvim" },
+}
+```
+
+Then in ~/.config/nvim/lua/config/lazy.lua you can add this below the last line. The code will setup keymaps to execute some of the functions provided by nvim-telescope. The `<C-p>` keymap is a `Ctrl + p` keybinding that opens a fuzzy finder for files in a modal.
+
+Add the following:
+
+```vim
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+```
+
+3. Fix LazyFonts icons not working. They show with question marks.
+
+It will require Nerd Fonts. Download any one of the fonts. You can get from [here]i(https://www.nerdfonts.com/font-downloads)
+
+Next open the Font Book in mac and add the Nerd Font. 
+
+The final step is to navigate to the terminal > preferences and select the Nerd Font as the default. Run nvim and the icons will now show correctly.
+
+4. Change the color scheme for Lazy Vim as the default was barely readable.
+
+```bash
+touch ~/.config/nvim/lua/plugins/colorscheme.lua
+```
+
+You can use whatever you want but I just wanted it readable. You can get more info here. I used Gruvbox. 
+
+```vim
+return {
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
+
+  -- Configure LazyVim to load gruvbox
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  }
+}
+```
+
+
+
+
