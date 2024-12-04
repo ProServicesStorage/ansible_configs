@@ -42,7 +42,6 @@
       - ruby33
       - rbenv
 
-
   - name: users | mr | copy dotfiles
     tags: dotfiles,zsh
     copy:
@@ -70,4 +69,11 @@
       type: bool
       value: true
     become_user: mr
+
+  - name: Disable system notifications
+    community.general.osx_defaults:
+      path: /Library/Preferences/.GlobalPreferences
+      domain: NSUserNotificationCenter
+      key: enabled
+      value: false
 

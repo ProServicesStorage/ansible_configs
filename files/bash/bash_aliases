@@ -77,3 +77,7 @@ if [ -f /usr/bin/pacman ]; then
   alias upgrade='sudo pacman -Syu'
   alias install='sudo pacman -S'
 fi
+
+# Git Aliases
+alias ga="git add ."
+alias gp="git push origin main"
