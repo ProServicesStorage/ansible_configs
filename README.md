@@ -196,7 +196,7 @@ The final step is to navigate to the terminal > preferences and select the Nerd 
 touch ~/.config/nvim/lua/plugins/colorscheme.lua
 ```
 
-You can use whatever you want but I just wanted it readable. You can get more info here. I used Gruvbox. 
+You can use whatever you want but I just wanted it readable. You can get more info [here](http://www.lazyvim.org/plugins/colorscheme). I used Gruvbox. 
 
 ```vim
 return {
