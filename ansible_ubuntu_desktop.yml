@@ -136,6 +136,12 @@
       - { src: 'bash/bashrc', dest: '.bashrc' }
       - { src: 'bash/profile', dest: '.profile' }
 
+  - name: create lazyvim config directory for nvim
+    file:
+      path: ~/.config/nvim
+      state: directory
+      mode: '0755'
+
   - name: clone lazyvim repo
     git:
       repo: 'https://github.com/LazyVim/starter'
