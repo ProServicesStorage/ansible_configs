@@ -37,3 +37,14 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+maczip () {
+  # zip without .DS_Store on a Mac
+  zip -r "$1.zip" "$1" -x "*.DS_Store"
+}
+
+# Create a new directory and enter it
+mkd() {
+        mkdir -p "$@"
+        cd "$@" || exit
+}

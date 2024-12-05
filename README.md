@@ -110,7 +110,7 @@ Unfortunately the overall process with a Mac is more manual. Some steps can stil
 4. Update DNS to the internal DNS server for local name resolution
 5. [optional] Add the new hostname to the local DNS server
 6. [optional] Set a static IP via reserved DHCP.
-7. Install x-tools
+7. Install x-tools. Another 20 minutes.
    
 ```bash
 xcode-select --install
@@ -119,7 +119,6 @@ xcode-select --install
 8. Download then install MacPorts. You can download from [here](https://www.macports.org/install.php). Click on your version of OSX 
 9. Download and install Python for mac. You can get [here](https://www.python.org/downloads/)
 10.  Install Python which also installs `pip`
-
 11. Upgrade pip
 
 ```bash
