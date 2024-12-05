@@ -96,5 +96,11 @@
       dest: /Users/mr/.config/nvim/lua/plugins/colorscheme.lua
       owner: mr
       group: staff
+  
+  - name: Set default Terminal font size
+    community.general.osx_defaults:
+      domain: com.apple.Terminal
+      key: DefaultWindowFontSize
+      value: 14
 
 
