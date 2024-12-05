@@ -100,11 +100,8 @@
   - name: Set default Terminal font size
     community.general.osx_defaults:
       domain: com.apple.Terminal
-      key: "Window Settings"
-      subkey: "Basic"
-      type: dict
-      value:
-        FontSize: 14
-
+      key: DefaultWindowFontSize
+      value: 14
+    become_user: mr
 
 
