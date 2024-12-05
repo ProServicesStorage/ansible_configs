@@ -102,37 +102,37 @@ I have a couple of older Macbooks and I wanted to test automating there build. T
 
 Initial tests run with a 12-inch MacBook (Early 2016). I initially started working with Homebrew as I have used this in the past but quickly found out this was a no-go. It was taking hours run builds and not only that it isn't even supported on the OS I was testing with, **Monterey**. I used **MacPorts** instead which is supported with Monterey and also worked much faster.
 
-Unfortunately the overall process with a Mac is more manual.
+Unfortunately the overall process with a Mac is more manual. Some steps can still be automated!
 
 1. Refresh installation of Mac using Command R during boot. Takes a couple of hours.
-
-2. Update OS. Another 30-45 minutes.
-
-3. Install x-tools
-
+2. Update OS. Another 45 minutes with reboot.
+3. Change hostname
+4. Update DNS to the internal DNS server for local name resolution
+5. [optional] Add the new hostname to the local DNS server
+6. [optional] Set a static IP via reserved DHCP.
+7. Install x-tools
+   
 ```bash
 xcode-select --install
 ```
 
-4. Download then install MacPorts. You can download from [here](https://www.macports.org/install.php). Click on your version of OSX 
+8. Download then install MacPorts. You can download from [here](https://www.macports.org/install.php). Click on your version of OSX 
+9. Download and install Python for mac. You can get [here](https://www.python.org/downloads/)
+10.  Install Python which also installs `pip`
 
-5. Download and install Python for mac. You can get [here](https://www.python.org/downloads/)
-
-6. Install Python which also installs `pip`
-
-7. Upgrade pip
+11. Upgrade pip
 
 ```bash
 pip3 install --upgrade pip
 ```
 
-8. Install Ansible on the macbook
+12. Install Ansible on the macbook
 
 ```bash
 pip3 install ansible
 ```
 
-8. Run playbook from macbook.
+13. Run playbook from macbook.
 
 ```bash
 sudo ansible-pull -U https://github.com/ProServicesStorage/ansible_configs.git ansible_mac.yml
@@ -211,7 +211,3 @@ return {
   }
 }
 ```
-
-
-
-

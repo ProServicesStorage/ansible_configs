@@ -90,3 +90,11 @@
       dest: ~/.config/nvim
     become_user: mr
 
+  - name: copy colorscheme lua file
+    copy:
+      src: files/mac/colorscheme.lua
+      dest: /Users/mr/.config/nvim/lua/plugins/colorscheme.lua
+      owner: mr
+      group: staff
+
+
