@@ -112,14 +112,6 @@
       group: root
       mode: 0440
 
-  - name: add ansible-pull cron job
-    cron:
-      name: ansible auto-provision
-      user: voltron
-      minute: "15"
-      hour: "2"
-      job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
-
   - name: users | mr | copy dotfiles
     tags: dotfiles,users,jay,tmux,users,vim,zsh
     copy:
@@ -148,3 +140,11 @@
       repo: 'https://github.com/LazyVim/starter'
       dest: ~/.config/nvim
     become_user: mr
+  
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: voltron
+      minute: "15"
+      hour: "2"
+      job: ansible-pull -o -U https://github.com/ProServicesStorage/ansible_configs.git
