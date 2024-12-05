@@ -189,7 +189,7 @@ Next open the Font Book in mac and add the Nerd Font.
 
 The final step is to navigate to the terminal > preferences and select the Nerd Font as the default. Run nvim and the icons will now show correctly.
 
-1. Change the color scheme for Lazy Vim as the default was barely readable on the MAC
+4. Change the color scheme for Lazy Vim as the default was barely readable on the MAC
 
 ```bash
 touch ~/.config/nvim/lua/plugins/colorscheme.lua
