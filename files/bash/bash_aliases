@@ -19,6 +19,7 @@ alias l.=' ls -lhFa --time-style=long-iso --color=auto'
 alias ll=' ls'
 alias ls=' ls -lhF --time-style=long-iso --color=auto'
 alias lsmount='mount |column -t'
+#creates necessary parent directories
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
 alias h='history'
@@ -30,6 +31,8 @@ alias ssha='eval $(ssh-agent) && ssh-add'
 alias svim='sudo vim'
 alias tn=' tmux new -s'
 alias weather='curl wttr.in'
+alias hgrep='history | grep'
+alias meminfo="free -m -l -t"
 
 ## get top process eating memory
 alias memHog='ps auxf | sort -nr -k 4 | head -10'
@@ -49,8 +52,6 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
-# reload bash config
-alias reload="source ~/.bashrc"
 
 # Manage packages easier
 if [ -f /usr/bin/apt ]; then
@@ -69,3 +70,42 @@ fi
 alias ga="git add ."
 alias gp="git push origin main"
 alias gs="git status"
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+## resume wget by default ##
+alias wget='wget -c'
+
+# Docker Aliases
+alias dl="sudo docker ps -l -q"
+alias dps="sudo docker ps"
+alias di="sudo docker images"
+alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias dkd="sudo docker run -d -P"
+alias dki="sudo docker run -i -t -P"
+alias dex="sudo docker exec -i -t"
+
+# System Aliases
+alias reboot="sudo /sbin/reboot"
+alias shutdown="sudo /sbin/shutdown"
+
+# Get details of a process
+alias paux='ps aux | grep'
+
+#Grabs the disk usage in the current directory
+alias usage='du -ch | grep total'
+
+# Gets the total disk usage on your machine
+alias totalusage='df -hl --total | grep total'
+
+#Shows the individual partition usages without the temporary memory values
+alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
+
+# Gives you what is using the most space. Both directories and files. Varies on current directory
+alias most='du -hsx * | sort -rh | head -10'
+
+# reload bash config
+alias reload="source ~/.bashrc"

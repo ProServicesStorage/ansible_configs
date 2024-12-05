@@ -8,7 +8,7 @@ A work in progress....
 
 ## Server Setup
 
-For server setup I will use a standard push configuation which makes sense with servers. It is agentless which is good and a ssh server is likely already running.
+For server setup I will use a standard push configuration which makes sense with servers. It is agentless which is good and a ssh server is likely already running.
 
 ### Prepare ssh
 
@@ -32,7 +32,6 @@ ssh-copy-id -i ~/.ssh/ansible.pub client1
 ```bash
 ssh -i ~/.ssh/ansible client1
 ```
-
 
 ## Linux Desktop Setup
 
@@ -101,13 +100,13 @@ curl http://angie.home/scripts/ansible.sh | sudo bash
 
 I have a couple of older Macbooks and I wanted to test automating there build. The idea being to reinstall the OS periodically and then run an ansible script to automate the build. There is some info out there but it is more limited compared to Linux. 
 
-I initially started working with Homebrew as I have used this in the past but quickly find out this was a no-go. It was taking hours run builds and not only that it isn't even supported on the OS I was testing with, Monterey. I used **MacPorts** instead which is supported with Monterey and also worked much faster.
+Initial tests run with a 12-inch MacBook (Early 2016). I initially started working with Homebrew as I have used this in the past but quickly found out this was a no-go. It was taking hours run builds and not only that it isn't even supported on the OS I was testing with, **Monterey**. I used **MacPorts** instead which is supported with Monterey and also worked much faster.
 
-Unfortunately the overrall process with a Mac is more manual.
+Unfortunately the overall process with a Mac is more manual.
 
-1. Refresh installation of Mac using Command R during boot
+1. Refresh installation of Mac using Command R during boot. Takes a couple of hours.
 
-2. Update OS
+2. Update OS. Another 30-45 minutes.
 
 3. Install x-tools
 
@@ -190,7 +189,7 @@ Next open the Font Book in mac and add the Nerd Font.
 
 The final step is to navigate to the terminal > preferences and select the Nerd Font as the default. Run nvim and the icons will now show correctly.
 
-4. Change the color scheme for Lazy Vim as the default was barely readable.
+1. Change the color scheme for Lazy Vim as the default was barely readable on the MAC
 
 ```bash
 touch ~/.config/nvim/lua/plugins/colorscheme.lua
