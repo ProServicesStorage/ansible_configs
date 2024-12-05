@@ -48,3 +48,9 @@ mkd() {
         mkdir -p "$@"
         cd "$@" || exit
 }
+
+### shows the last installed packages from history
+function apt-history(){
+
+        zgrep -Pho '^Commandline: apt install (?!.*--reinstall)\K.*' /var/log/apt/history.log*
+}
