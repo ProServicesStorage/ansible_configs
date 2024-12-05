@@ -43,7 +43,7 @@ To run from the desktop/laptop manually run the following command.
 sudo ansible-pull -U https://github.com/ProServicesStorage/ansible_configs.git ansible_ubuntu_desktop.yml
 ``` 
 
-### Setup bootstrap server
+### Setup bootstrap server (Optional)
 
 Prior to running ansible-pull the ansible package needs to be installed on the laptop/desktop we are updating. To do this we can run a shell script from a local web server. You could, of course, just install manually as well using the steps in the script.
 
